@@ -7,21 +7,21 @@ title = "Git Underneath"
 # **U N D E R N E A T H**
 ---
 
-<!--: .wrap .aligncenter -->
+<!--: .wrap .improwisedlogo .aligncenter  bgimage=https://www.improwised.com/img/logo.png bgpos=right-bottom -->
 
 # What is GIT? {.text-landing}
 
 ---
 
 
-<!--: .wrap .aligncenter -->
+<!--: .wrap .aligncenter bgimage=https://www.improwised.com/img/logo.png bgpos=right-bottom -->
 
 # How Git Records Changes ? {.text-landing}
 
 ---
 
 
-<!--: .wrap -->
+<!--: .wrap bgimage=https://www.improwised.com/img/logo.png bgpos=right-bottom -->
 
 - Git stores snapshot as object inside your .git directory, Which structure look like this.
 
@@ -45,7 +45,7 @@ title = "Git Underneath"
 - **`refs`** have **`head`** & **`tag`** folders respectively, where **`head`** represents current commit pointed in each branch that you have worked and **`tag`** contains the information about tag that you have created.
 ---
 
-<!--: .wrap .aligncenter -->
+<!--: .wrap .aligncenter bgimage=https://www.improwised.com/img/logo.png bgpos=right-bottom -->
 
 # What are the  {.text-landing}
 # types of Git **Merge** ? {.text-landing}
@@ -70,7 +70,7 @@ A standard merge will take each commit in the branch being merged and add them t
 
 ---
 
-<!-- : .wrap -->
+<!-- : .wrap bgimage=https://www.improwised.com/img/logo.png bgpos=right-bottom -->
 
 |||v
 
@@ -88,7 +88,7 @@ No new commits were made to the base branch since our branch was created, Git ca
 
 ---
 
-<!-- : .wrap -->
+<!-- : .wrap bgimage=https://www.improwised.com/img/logo.png bgpos=right-bottom -->
 
 |||v
 
@@ -106,7 +106,7 @@ Squash takes all the commits in the branch (A,B,C) and melds them into 1 commit.
 
 ---
 
-<!-- : .wrap -->
+<!-- : .wrap bgimage=https://www.improwised.com/img/logo.png bgpos=right-bottom -->
 
 |||v
 
@@ -124,7 +124,7 @@ A rebase and merge will take where the branch was created and move that point to
 
 ---
 
-<!--: .wrap .aligncenter -->
+<!--: .wrap .aligncenter bgimage=https://www.improwised.com/img/logo.png bgpos=right-bottom -->
 
 # Let's do some exercise.
 ![exercise](images/excercise.gif "exercise")
