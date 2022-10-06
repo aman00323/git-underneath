@@ -3,8 +3,8 @@ title = "Git Underneath"
 +++
 <!--: .wrap .size-80 ..alignright bgimage=images/welcome.gif -->
 
-# G I T
-# U N D E R N E A T H
+# **G I T**
+# **U N D E R N E A T H**
 ---
 
 <!--: .wrap .aligncenter -->
@@ -23,7 +23,8 @@ title = "Git Underneath"
 
 <!--: .wrap -->
 
-- Git store snapshot as object inside your **`.git`** directory, Which structure look like this.
+- Git stores snapshot as object inside your .git directory, Which structure look like this.
+
 ```
 .git
 ├── HEAD
@@ -36,18 +37,18 @@ title = "Git Underneath"
  ├── heads
  └── tags
 ```
-- Git store most of the content inside **`Objects`** directory. If you go to this directory **`.git/objects/`** will have folders which records different snapshot.
+- Git stores most of the content inside **`Objects`** directory. If you go inside this directory **`.git/objects/`** it will have folders which records different snapshot.
 - While **`.git/objects/info`** contains information regrading file that are excluded, where as **`.git/objects/pack`** contains all objects that are removed.
-- **`HEAD`** represents refs, current branch which it is referrring.
+- **`HEAD`** represents refs, current branch which it is referring.
 - **`config`** will hold your configuration which will be repository specific.
-- **`hooks`** it contains scripts to be executed on trigger of particular event. 
-- **`refs`** have **`head`** & **`tag`** folder respectively, where **`head`** represents current commit pointed in each branch that you have worked. **`tag`** contains information about tag that you have created.
+- **`hooks`** it contains scripts to be executed on trigger of particular event.
+- **`refs`** have **`head`** & **`tag`** folders respectively, where **`head`** represents current commit pointed in each branch that you have worked and **`tag`** contains the information about tag that you have created.
 ---
-<!--: .wrap -->
 
 <!--: .wrap .aligncenter -->
 
-# What are the types of Git Merge ? {.text-landing}
+# What are the  {.text-landing}
+# types of Git **Merge** ? {.text-landing}
 
 ---
 
@@ -57,7 +58,7 @@ title = "Git Underneath"
 
 ### **Merge**
 
-A standard merge will take each commit in the branch being merged and add them to the history of the base branch based on the timestamp of when they were created.It will also create a merge commit, a special type of “empty” commit that indicates when the merge occurred.
+A standard merge will take each commit in the branch being merged and add them to the history of the base branch based on the timestamp of when they were created. It will also create a merge commit, a special type of “empty” commit that indicates when the merge occurred.
 
 
 ![merge-meme](images/git-merge-git.gif "merge-meme")
@@ -75,7 +76,7 @@ A standard merge will take each commit in the branch being merged and add them t
 
 ### **Fast Forward Merge**
 
-No new commits were made to the base branch since our branch was created, Git can do something called a “Fast Forward Merge”. This is the same as a Merge but does not create a merge commit.This is as if you made the commits directly on the base branch. The idea is because no changes were made to the base branch there’s no need to capture a branch had occurred.
+No new commits were made to the base branch since our branch was created, Git can do something called a “Fast Forward Merge”. This is the same as a Merge but does not create a merge commit. This is as if you made the commits directly on the base branch. The idea is because no changes were made to the base branch there’s no need to capture a branch had occurred.
 
 
 ![fast forward merge](images/fast-forward.gif "fast forward merge")
@@ -125,6 +126,6 @@ A rebase and merge will take where the branch was created and move that point to
 
 <!--: .wrap .aligncenter -->
 
-# Let's do some excercise.
-![excercise](images/excercise.gif "excercise")
+# Let's do some exercise.
+![exercise](images/excercise.gif "exercise")
 
