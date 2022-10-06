@@ -26,8 +26,8 @@
 <span class=background style=background-image:url(images/welcome.gif)></span>
 <div class="wrap size-80">
 <div class=alignright>
-<h1 id=g-i-t>G I T</h1>
-<h1 id=u-n-d-e-r-n-e-a-t-h>U N D E R N E A T H</h1>
+<h1 id=g-i-t><strong>G I T</strong></h1>
+<h1 id=u-n-d-e-r-n-e-a-t-h><strong>U N D E R N E A T H</strong></h1>
 </div></div>
 </section>
 <section id=slide2>
@@ -43,7 +43,7 @@
 <section id=slide4>
 <div class=wrap>
 <ul>
-<li>Git store snapshot as object inside your <strong><code>.git</code></strong> directory, Which structure look like this.</li>
+<li>Git stores snapshot as object inside your .git directory, Which structure look like this.</li>
 </ul>
 <pre><code>.git
 ├── HEAD
@@ -56,18 +56,19 @@
  ├── heads
  └── tags
 </code></pre><ul>
-<li>Git store most of the content inside <strong><code>Objects</code></strong> directory. If you go to this directory <strong><code>.git/objects/</code></strong> will have folders which records different snapshot.</li>
+<li>Git stores most of the content inside <strong><code>Objects</code></strong> directory. If you go inside this directory <strong><code>.git/objects/</code></strong> it will have folders which records different snapshot.</li>
 <li>While <strong><code>.git/objects/info</code></strong> contains information regrading file that are excluded, where as <strong><code>.git/objects/pack</code></strong> contains all objects that are removed.</li>
-<li><strong><code>HEAD</code></strong> represents refs, current branch which it is referrring.</li>
+<li><strong><code>HEAD</code></strong> represents refs, current branch which it is referring.</li>
 <li><strong><code>config</code></strong> will hold your configuration which will be repository specific.</li>
 <li><strong><code>hooks</code></strong> it contains scripts to be executed on trigger of particular event.</li>
-<li><strong><code>refs</code></strong> have <strong><code>head</code></strong> & <strong><code>tag</code></strong> folder respectively, where <strong><code>head</code></strong> represents current commit pointed in each branch that you have worked. <strong><code>tag</code></strong> contains information about tag that you have created.</li>
+<li><strong><code>refs</code></strong> have <strong><code>head</code></strong> & <strong><code>tag</code></strong> folders respectively, where <strong><code>head</code></strong> represents current commit pointed in each branch that you have worked and <strong><code>tag</code></strong> contains the information about tag that you have created.</li>
 </ul>
 </div>
 </section>
 <section id=slide5>
-<div class=wrap>
-<h1 class=text-landing id=what-are-the-types-of-git-merge->What are the types of Git Merge ?</h1>
+<div class="wrap aligncenter">
+<h1 class=text-landing id=what-are-the>What are the </h1>
+<h1 class=text-landing id=types-of-git-merge->types of Git <strong>Merge</strong> ?</h1>
 </div>
 </section>
 <section id=slide6>
@@ -75,7 +76,7 @@
 <div class="grid vertical-align">
 <div class=column>
 <h3 id=merge><strong>Merge</strong></h3>
-<p>A standard merge will take each commit in the branch being merged and add them to the history of the base branch based on the timestamp of when they were created.It will also create a merge commit, a special type of “empty” commit that indicates when the merge occurred.</p>
+<p>A standard merge will take each commit in the branch being merged and add them to the history of the base branch based on the timestamp of when they were created. It will also create a merge commit, a special type of “empty” commit that indicates when the merge occurred.</p>
 <p><img src=images/git-merge-git.gif alt=merge-meme title=merge-meme></p>
 </div>
 <div class=column>
@@ -88,7 +89,7 @@
 <div class="grid vertical-align">
 <div class=column>
 <h3 id=fast-forward-merge><strong>Fast Forward Merge</strong></h3>
-<p>No new commits were made to the base branch since our branch was created, Git can do something called a “Fast Forward Merge”. This is the same as a Merge but does not create a merge commit.This is as if you made the commits directly on the base branch. The idea is because no changes were made to the base branch there’s no need to capture a branch had occurred.</p>
+<p>No new commits were made to the base branch since our branch was created, Git can do something called a “Fast Forward Merge”. This is the same as a Merge but does not create a merge commit. This is as if you made the commits directly on the base branch. The idea is because no changes were made to the base branch there’s no need to capture a branch had occurred.</p>
 <p><img src=images/fast-forward.gif alt="fast forward merge" title="fast forward merge"></p>
 </div>
 <div class=column>
@@ -124,8 +125,8 @@
 </section>
 <section id=slide10>
 <div class="wrap aligncenter">
-<h1 id=lets-do-some-excercise>Let&rsquo;s do some excercise.</h1>
-<p><img src=images/excercise.gif alt=excercise title=excercise></p>
+<h1 id=lets-do-some-exercise>Let&rsquo;s do some exercise.</h1>
+<p><img src=images/excercise.gif alt=exercise title=exercise></p>
 </div>
 </section>
 <section id=slide11>
