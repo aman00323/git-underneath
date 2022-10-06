@@ -1,0 +1,144 @@
+<!doctype html><html lang=en-us prefix="og: http://ogp.me/ns#">
+<head>
+<meta name=generator content="Hugo 0.87.0">
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Git Underneath</title>
+<meta name=author content="RCJacH">
+<meta charset=utf-8>
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&subset=latin-ext" rel=stylesheet>
+<link rel=stylesheet type=text/css media=all href=css/webslides.css>
+<link rel=stylesheet type=text/css media=all href=css/svg-icons.css>
+<link rel="shortcut icon" sizes=16x16 href=/img/favicons/favicon.png>
+<link rel="shortcut icon" sizes=32x32 href=/img/favicons/favicon-32.png>
+<link rel="apple-touch-icon icon" sizes=76x76 href=/img/favicons/favicon-76.png>
+<link rel="apple-touch-icon icon" sizes=120x120 href=/img/favicons/favicon-120.png>
+<link rel="apple-touch-icon icon" sizes=152x152 href=/img/favicons/favicon-152.png>
+<link rel="apple-touch-icon icon" sizes=180x180 href=/img/favicons/favicon-180.png>
+<link rel="apple-touch-icon icon" sizes=192x192 href=/img/favicons/favicon-192.png>
+<meta name=mobile-web-app-capable content="yes">
+<meta name=theme-color content="#333333">
+</head>
+<body>
+<main role=main>
+<article id=webslides>
+<section id=slide1>
+<span class=background style=background-image:url(images/welcome.gif)></span>
+<div class="wrap size-80">
+<div class=alignright>
+<h1 id=g-i-t>G I T</h1>
+<h1 id=u-n-d-e-r-n-e-a-t-h>U N D E R N E A T H</h1>
+</div></div>
+</section>
+<section id=slide2>
+<div class="wrap aligncenter">
+<h1 class=text-landing id=what-is-git>What is GIT?</h1>
+</div>
+</section>
+<section id=slide3>
+<div class="wrap aligncenter">
+<h1 class=text-landing id=how-git-records-changes->How Git Records Changes ?</h1>
+</div>
+</section>
+<section id=slide4>
+<div class=wrap>
+<ul>
+<li>Git store snapshot as object inside your <strong><code>.git</code></strong> directory, Which structure look like this.</li>
+</ul>
+<pre><code>.git
+├── HEAD
+├── config
+├── hooks
+├── objects
+│ ├── info
+│ └── pack
+└── refs
+ ├── heads
+ └── tags
+</code></pre><ul>
+<li>Git store most of the content inside <strong><code>Objects</code></strong> directory. If you go to this directory <strong><code>.git/objects/</code></strong> will have folders which records different snapshot.</li>
+<li>While <strong><code>.git/objects/info</code></strong> contains information regrading file that are excluded, where as <strong><code>.git/objects/pack</code></strong> contains all objects that are removed.</li>
+<li><strong><code>HEAD</code></strong> represents refs, current branch which it is referrring.</li>
+<li><strong><code>config</code></strong> will hold your configuration which will be repository specific.</li>
+<li><strong><code>hooks</code></strong> it contains scripts to be executed on trigger of particular event.</li>
+<li><strong><code>refs</code></strong> have <strong><code>head</code></strong> & <strong><code>tag</code></strong> folder respectively, where <strong><code>head</code></strong> represents current commit pointed in each branch that you have worked. <strong><code>tag</code></strong> contains information about tag that you have created.</li>
+</ul>
+</div>
+</section>
+<section id=slide5>
+<div class=wrap>
+<h1 class=text-landing id=what-are-the-types-of-git-merge->What are the types of Git Merge ?</h1>
+</div>
+</section>
+<section id=slide6>
+<div class=wrap>
+<div class="grid vertical-align">
+<div class=column>
+<h3 id=merge><strong>Merge</strong></h3>
+<p>A standard merge will take each commit in the branch being merged and add them to the history of the base branch based on the timestamp of when they were created.It will also create a merge commit, a special type of “empty” commit that indicates when the merge occurred.</p>
+<p><img src=images/git-merge-git.gif alt=merge-meme title=merge-meme></p>
+</div>
+<div class=column>
+<p><img src=images/git-merge.png alt=merge title=merge></p>
+</div>
+</div> </div>
+</section>
+<section id=slide7>
+<div class=wrap>
+<div class="grid vertical-align">
+<div class=column>
+<h3 id=fast-forward-merge><strong>Fast Forward Merge</strong></h3>
+<p>No new commits were made to the base branch since our branch was created, Git can do something called a “Fast Forward Merge”. This is the same as a Merge but does not create a merge commit.This is as if you made the commits directly on the base branch. The idea is because no changes were made to the base branch there’s no need to capture a branch had occurred.</p>
+<p><img src=images/fast-forward.gif alt="fast forward merge" title="fast forward merge"></p>
+</div>
+<div class=column>
+<p><img src=images/git-fast-forward.png alt="fast forward merge" title="fast forward merge"></p>
+</div>
+</div> </div>
+</section>
+<section id=slide8>
+<div class=wrap>
+<div class="grid vertical-align">
+<div class=column>
+<h3 id=squash--merge><strong>Squash & Merge</strong></h3>
+<p>Squash takes all the commits in the branch (A,B,C) and melds them into 1 commit. That commit is then added to the history, but none of the commits that made up the branch are preserved.</p>
+<p><img src=images/git-squash.gif alt="squash and merge" title="squash and merge"></p>
+</div>
+<div class=column>
+<p><img src=images/git-squash.png alt="squash and merge" title="squash and merge"></p>
+</div>
+</div> </div>
+</section>
+<section id=slide9>
+<div class=wrap>
+<div class="grid vertical-align">
+<div class=column>
+<h3 id=rebase--merge><strong>Rebase & Merge</strong></h3>
+<p>A rebase and merge will take where the branch was created and move that point to the last commit into the base branch, then reapply the commits on top of those changes.This is like a fast forward merge, but works when changes have been made into the base branch in the mean while</p>
+<p><img src=images/git-rebase.gif alt="rebase and merge" title="rebase and merge"></p>
+</div>
+<div class=column>
+<p><img src=images/git-rebase.png alt="rebase and merge" title="rebase and merge"></p>
+</div>
+</div> </div>
+</section>
+<section id=slide10>
+<div class="wrap aligncenter">
+<h1 id=lets-do-some-excercise>Let&rsquo;s do some excercise.</h1>
+<p><img src=images/excercise.gif alt=excercise title=excercise></p>
+</div>
+</section>
+<section id=slide11>
+<div class="wrap aligncenter">
+<h1 class=text-landing id=thank-you>Thank You</h1>
+<p><a href=https://lukemerrett.com/different-merge-types-in-git/><strong>Git Reference</strong></a> <br>
+<a href=https://git-school.github.io/visualizing-git/><strong>Git Intereactive Playground</strong></a> <br></p>
+</div>
+</section>
+</article>
+</main>
+<script src=js/webslides.min.js></script>
+<script>window.ws=new WebSlides({minWheelDelta:40,scrollWait:450,slideOffset:50})</script>
+<script defer src=js/svg-icons.js></script>
+</body>
+</html>
