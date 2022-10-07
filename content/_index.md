@@ -7,21 +7,21 @@ title = "Git Underneath"
 # **U N D E R N E A T H**
 ---
 
-<!--: .wrap .improwisedlogo .aligncenter  bgimage=https://www.improwised.com/img/logo.png bgpos=right-bottom -->
+<!--: .wrap .improwisedlogo .aligncenter  bgimage=images/improwised.png bgpos=right-top -->
 
 # What is GIT? {.text-landing}
 
 ---
 
 
-<!--: .wrap .aligncenter bgimage=https://www.improwised.com/img/logo.png bgpos=right-bottom -->
+<!--: .wrap .aligncenter bgimage=images/improwised.png bgpos=right-top -->
 
 # How Git Records Changes ? {.text-landing}
 
 ---
 
 
-<!--: .wrap bgimage=https://www.improwised.com/img/logo.png bgpos=right-bottom -->
+<!--: .wrap bgimage=images/improwised.png bgpos=right-top -->
 
 - Git stores snapshot as object inside your .git directory, Which structure look like this.
 
@@ -45,14 +45,14 @@ title = "Git Underneath"
 - **`refs`** have **`head`** & **`tag`** folders respectively, where **`head`** represents current commit pointed in each branch that you have worked and **`tag`** contains the information about tag that you have created.
 ---
 
-<!--: .wrap .aligncenter bgimage=https://www.improwised.com/img/logo.png bgpos=right-bottom -->
+<!--: .wrap .aligncenter bgimage=images/improwised.png bgpos=right-top -->
 
 # What are the  {.text-landing}
 # types of Git **Merge** ? {.text-landing}
 
 ---
 
-<!-- : .wrap -->
+<!-- : .wrap bgimage=images/improwised.png bgpos=right-top -->
 
 |||v
 
@@ -61,7 +61,7 @@ title = "Git Underneath"
 A standard merge will take each commit in the branch being merged and add them to the history of the base branch based on the timestamp of when they were created. It will also create a merge commit, a special type of “empty” commit that indicates when the merge occurred.
 
 
-![merge-meme](images/git-merge-git.gif "merge-meme")
+![merge-meme](images/git-merge.gif "merge-meme")
 
 |||
 
@@ -70,7 +70,7 @@ A standard merge will take each commit in the branch being merged and add them t
 
 ---
 
-<!-- : .wrap bgimage=https://www.improwised.com/img/logo.png bgpos=right-bottom -->
+<!-- : .wrap bgimage=images/improwised.png bgpos=right-top -->
 
 |||v
 
@@ -88,11 +88,35 @@ No new commits were made to the base branch since our branch was created, Git ca
 
 ---
 
-<!-- : .wrap bgimage=https://www.improwised.com/img/logo.png bgpos=right-bottom -->
+<!--: .wrap .aligncenter bgimage=images/improwised.png bgpos=right-top -->
+
+# What is **Rebase** and **Squash** ? {.text-landing}
+
+---
+
+<!-- : .wrap bgimage=images/improwised.png bgpos=right-top -->
 
 |||v
 
-### **Squash & Merge**
+### **Rebase**
+
+A rebase will take where the branch was created and move that point to the last commit into the base branch, then reapply the commits on top of those changes.This is like a fast forward merge, but works when changes have been made into the base branch in the mean while
+
+
+![rebase and merge](images/git-rebase.gif "rebase and merge")
+
+|||
+
+![rebase and merge](images/git-rebase.png "rebase and merge")
+
+
+---
+
+<!-- : .wrap bgimage=images/improwised.png bgpos=right-top -->
+
+|||v
+
+### **Squash**
 
 Squash takes all the commits in the branch (A,B,C) and melds them into 1 commit. That commit is then added to the history, but none of the commits that made up the branch are preserved.
 
@@ -106,25 +130,7 @@ Squash takes all the commits in the branch (A,B,C) and melds them into 1 commit.
 
 ---
 
-<!-- : .wrap bgimage=https://www.improwised.com/img/logo.png bgpos=right-bottom -->
-
-|||v
-
-### **Rebase & Merge**
-
-A rebase and merge will take where the branch was created and move that point to the last commit into the base branch, then reapply the commits on top of those changes.This is like a fast forward merge, but works when changes have been made into the base branch in the mean while
-
-
-![rebase and merge](images/git-rebase.gif "rebase and merge")
-
-|||
-
-![rebase and merge](images/git-rebase.png "rebase and merge")
-
-
----
-
-<!--: .wrap .aligncenter bgimage=https://www.improwised.com/img/logo.png bgpos=right-bottom -->
+<!--: .wrap .aligncenter bgimage=images/improwised.png bgpos=right-top -->
 
 # Let's do some exercise.
 ![exercise](images/excercise.gif "exercise")

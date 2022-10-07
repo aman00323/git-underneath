@@ -1,7 +1,7 @@
 +++
 weight = 2
 +++
-<!--: .wrap .aligncenter bgimage=https://www.improwised.com/img/logo.png bgpos=right-bottom -->
+<!--: .wrap .aligncenter bgimage=images/improwised.png bgpos=right-top -->
 
 # Thank You {.text-landing}
 
