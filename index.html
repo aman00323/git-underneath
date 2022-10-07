@@ -31,19 +31,19 @@
 </div></div>
 </section>
 <section id=slide2>
-<span class=background-right-bottom style=background-image:url(https://www.improwised.com/img/logo.png)></span>
+<span class=background-right-top style=background-image:url(images/improwised.png)></span>
 <div class="wrap improwisedlogo aligncenter">
 <h1 class=text-landing id=what-is-git>What is GIT?</h1>
 </div>
 </section>
 <section id=slide3>
-<span class=background-right-bottom style=background-image:url(https://www.improwised.com/img/logo.png)></span>
+<span class=background-right-top style=background-image:url(images/improwised.png)></span>
 <div class="wrap aligncenter">
 <h1 class=text-landing id=how-git-records-changes->How Git Records Changes ?</h1>
 </div>
 </section>
 <section id=slide4>
-<span class=background-right-bottom style=background-image:url(https://www.improwised.com/img/logo.png)></span>
+<span class=background-right-top style=background-image:url(images/improwised.png)></span>
 <div class=wrap>
 <ul>
 <li>Git stores snapshot as object inside your .git directory, Which structure look like this.</li>
@@ -69,19 +69,20 @@
 </div>
 </section>
 <section id=slide5>
-<span class=background-right-bottom style=background-image:url(https://www.improwised.com/img/logo.png)></span>
+<span class=background-right-top style=background-image:url(images/improwised.png)></span>
 <div class="wrap aligncenter">
 <h1 class=text-landing id=what-are-the>What are the </h1>
 <h1 class=text-landing id=types-of-git-merge->types of Git <strong>Merge</strong> ?</h1>
 </div>
 </section>
 <section id=slide6>
+<span class=background-right-top style=background-image:url(images/improwised.png)></span>
 <div class=wrap>
 <div class="grid vertical-align">
 <div class=column>
 <h3 id=merge><strong>Merge</strong></h3>
 <p>A standard merge will take each commit in the branch being merged and add them to the history of the base branch based on the timestamp of when they were created. It will also create a merge commit, a special type of “empty” commit that indicates when the merge occurred.</p>
-<p><img src=images/git-merge-git.gif alt=merge-meme title=merge-meme></p>
+<p><img src=images/git-merge.gif alt=merge-meme title=merge-meme></p>
 </div>
 <div class=column>
 <p><img src=images/git-merge.png alt=merge title=merge></p>
@@ -89,7 +90,7 @@
 </div> </div>
 </section>
 <section id=slide7>
-<span class=background-right-bottom style=background-image:url(https://www.improwised.com/img/logo.png)></span>
+<span class=background-right-top style=background-image:url(images/improwised.png)></span>
 <div class=wrap>
 <div class="grid vertical-align">
 <div class=column>
@@ -103,26 +104,18 @@
 </div> </div>
 </section>
 <section id=slide8>
-<span class=background-right-bottom style=background-image:url(https://www.improwised.com/img/logo.png)></span>
-<div class=wrap>
-<div class="grid vertical-align">
-<div class=column>
-<h3 id=squash--merge><strong>Squash & Merge</strong></h3>
-<p>Squash takes all the commits in the branch (A,B,C) and melds them into 1 commit. That commit is then added to the history, but none of the commits that made up the branch are preserved.</p>
-<p><img src=images/git-squash.gif alt="squash and merge" title="squash and merge"></p>
+<span class=background-right-top style=background-image:url(images/improwised.png)></span>
+<div class="wrap aligncenter">
+<h1 class=text-landing id=what-is-rebase-and-squash->What is <strong>Rebase</strong> and <strong>Squash</strong> ?</h1>
 </div>
-<div class=column>
-<p><img src=images/git-squash.png alt="squash and merge" title="squash and merge"></p>
-</div>
-</div> </div>
 </section>
 <section id=slide9>
-<span class=background-right-bottom style=background-image:url(https://www.improwised.com/img/logo.png)></span>
+<span class=background-right-top style=background-image:url(images/improwised.png)></span>
 <div class=wrap>
 <div class="grid vertical-align">
 <div class=column>
-<h3 id=rebase--merge><strong>Rebase & Merge</strong></h3>
-<p>A rebase and merge will take where the branch was created and move that point to the last commit into the base branch, then reapply the commits on top of those changes.This is like a fast forward merge, but works when changes have been made into the base branch in the mean while</p>
+<h3 id=rebase><strong>Rebase</strong></h3>
+<p>A rebase will take where the branch was created and move that point to the last commit into the base branch, then reapply the commits on top of those changes.This is like a fast forward merge, but works when changes have been made into the base branch in the mean while</p>
 <p><img src=images/git-rebase.gif alt="rebase and merge" title="rebase and merge"></p>
 </div>
 <div class=column>
@@ -131,14 +124,28 @@
 </div> </div>
 </section>
 <section id=slide10>
-<span class=background-right-bottom style=background-image:url(https://www.improwised.com/img/logo.png)></span>
+<span class=background-right-top style=background-image:url(images/improwised.png)></span>
+<div class=wrap>
+<div class="grid vertical-align">
+<div class=column>
+<h3 id=squash><strong>Squash</strong></h3>
+<p>Squash takes all the commits in the branch (A,B,C) and melds them into 1 commit. That commit is then added to the history, but none of the commits that made up the branch are preserved.</p>
+<p><img src=images/git-squash.gif alt="squash and merge" title="squash and merge"></p>
+</div>
+<div class=column>
+<p><img src=images/git-squash.png alt="squash and merge" title="squash and merge"></p>
+</div>
+</div> </div>
+</section>
+<section id=slide11>
+<span class=background-right-top style=background-image:url(images/improwised.png)></span>
 <div class="wrap aligncenter">
 <h1 id=lets-do-some-exercise>Let&rsquo;s do some exercise.</h1>
 <p><img src=images/excercise.gif alt=exercise title=exercise></p>
 </div>
 </section>
-<section id=slide11>
-<span class=background-right-bottom style=background-image:url(https://www.improwised.com/img/logo.png)></span>
+<section id=slide12>
+<span class=background-right-top style=background-image:url(images/improwised.png)></span>
 <div class="wrap aligncenter">
 <h1 class=text-landing id=thank-you>Thank You</h1>
 <p><a href=https://lukemerrett.com/different-merge-types-in-git/><strong>Git Reference</strong></a> <br>
